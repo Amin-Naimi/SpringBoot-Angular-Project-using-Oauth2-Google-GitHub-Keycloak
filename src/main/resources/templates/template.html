@@ -38,7 +38,13 @@
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <li><a class="dropdown-item" href="#">Login</a></li>
-                        <li><a class="dropdown-item" href="#">Logout</a></li>
+                        <li>
+                            <form th:action="@{/logout}" method="post">
+                                <button class="btn btn-danger">Logout</button>
+
+
+                            </form>
+                        </li>
                         <li>
                             <hr class="dropdown-divider">
                         </li>
