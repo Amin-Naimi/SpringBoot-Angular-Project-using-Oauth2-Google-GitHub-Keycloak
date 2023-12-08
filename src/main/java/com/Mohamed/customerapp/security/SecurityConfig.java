@@ -23,7 +23,7 @@ public class SecurityConfig {
                 .authorizeHttpRequests(ar->ar.anyRequest().authenticated())
                 .oauth2Login(Customizer.withDefaults())
                 .logout((logout)-> logout
-                        .logoutSuccessUrl("/").permitAll()
+                        //.logoutSuccessUrl("/").permitAll() // lorsque je fait un logout il me retourne vers le path "/"
                         .deleteCookies("JSESSIONID"))
                 .build();
     }
